@@ -1,14 +1,17 @@
-import './App.css';
-import Login from './components/Login';
-import Profile from './components/Profile';
-
+import "./App.css";
+import SideBar from "./components/SideBar";
+import Update from "./components/Update";
+import Footer from './components/Footer'
 function App() {
-
   return (
-    <div className="App">
-      <h1>hello shakkeer</h1>
-      <Profile/>
-      <Login/>
+    <div className="App" style={{ backgroundColor: "gray", height: "100vh" }}>
+      <h1>Hello Shakkeer</h1>
+      <Update/>
+      <SideBar/>
+
+      <div >
+        <Footer/>
+      </div>
     </div>
   );
 }
