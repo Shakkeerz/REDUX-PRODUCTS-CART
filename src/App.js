@@ -1,18 +1,15 @@
 import "./App.css";
-import SideBar from "./components/SideBar";
-import Update from "./components/Update";
-import Footer from './components/Footer'
+import Header from "./components/Header";
+import ProductList from "./components/ProductList";
 function App() {
   return (
-    <div className="App" style={{ backgroundColor: "gray", height: "100vh" }}>
-      <h1>Hello Shakkeer</h1>
-      <Update/>
-      <SideBar/>
+  <>
+  <div className="p-5 bg-slate-800 text-white">
 
-      <div >
-        <Footer/>
-      </div>
-    </div>
+    <Header/>
+    <ProductList/>
+  </div>
+  </>
   );
 }
 
