@@ -1,10 +1,13 @@
 import "./App.css";
+import {Footer, Header, Main} from "./Components/Paths";
 function App() {
   return (
   <>
-  <div className="p-5 bg-slate-800 text-white">
+  <div className="m-10  bg-slate-200 h-screen border-2 border-dashed border-red-700">
 
-    Muhammad shakkeer
+   <Header/>
+   <Main/>
+   <Footer/>
   </div>
   </>
   );
