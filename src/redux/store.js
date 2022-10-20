@@ -1,13 +1,9 @@
+import { configureStore, createSlice } from "@reduxjs/toolkit";
+import cartReducer from './Cart'
 
-import { configureStore } from '@reduxjs/toolkit';
-import colorReducer from './color/colorSlice'
-import counterReducer from './counter/counterSclice'
-
-const store = configureStore({
-  reducer :{
-      colorReducer : colorReducer,
-      counter : counterReducer
-  }
-});
-
+const store  = configureStore({
+      reducer:{
+        cart : cartReducer,
+    }
+})
 export default store

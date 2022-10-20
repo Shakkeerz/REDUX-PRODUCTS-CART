@@ -1,16 +1,13 @@
-import "./App.css";
-import {Footer, Header, Main} from "./Components/Paths";
+import React from 'react'
+import {Header, ProductList} from './components/Path'
+
 function App() {
   return (
-  <>
-  <div className="m-10  bg-slate-200 h-screen border-2 border-dashed border-red-700">
-
-   <Header/>
-   <Main/>
-   <Footer/>
-  </div>
-  </>
-  );
+    <div>
+    <Header/>
+    <ProductList/>
+    </div>
+  )
 }
 
-export default App;
+export default App
