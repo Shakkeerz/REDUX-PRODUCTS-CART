@@ -12,15 +12,30 @@ const cartSlice = createSlice({
       state.cartCount = 1;
     },
     increment: (state, action) => {
-      state.cartList.push({ ...action.payload });
+        console.log(action.payload.id)
+        const checkProductId = state.cartList.filter((item)=> item.id === action.payload.id)
+        
+      if(checkProductId){
+        state.cartList.push({ ...action.payload, count: ++state.cartCount });
+        console.log(action.payload)
+    }
     },
-    decrement: (state,action) => {
+    decrement: (state, action) => {
       state.cartList.pop({
-        ...action.payload
-    })
+        ...action.payload,
+        count: --state.cartCount,
+      });
+    },
+    removeCart: (state, action) => {
+      console.log(action.payload);
+      const filteredCart = state.cartList.filter(
+        (cart) => cart.id !== action.payload
+      );
+      state.cartList = filteredCart;
     },
   },
 });
-export const { addToCart, increment, decrement } = cartSlice.actions;
+export const { addToCart, increment, decrement, removeCart } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -4,8 +4,8 @@ import products from "../api/product.json";
 import { AfterCart, BeforeCart } from "./Path";
 
 function ProductList() {
-    const {cartCount,cartList} = useSelector(state=>state.cart)
-console.log(cartList)
+  const { cartCount, cartList } = useSelector((state) => state.cart);
+  
   return (
     <section className="flex flex-wrap gap-3">
       {products?.map((product) => {
@@ -16,11 +16,7 @@ console.log(cartList)
               <img src={image} alt={title} className="w-full object-cover" />
             </div>
             <h3>{title}</h3>
-            {cartCount <= 0 ? (
-              <BeforeCart  />
-            ) : (
-              <AfterCart  product={product}/>
-            )}
+            {cartCount <= 0 ? <BeforeCart /> : <AfterCart product={product} />}
           </div>
         );
       })}
